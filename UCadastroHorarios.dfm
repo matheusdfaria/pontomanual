@@ -4,9 +4,9 @@ object frmPrincipal: TfrmPrincipal
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Horarios'
-  ClientHeight = 443
+  ClientHeight = 558
   ClientWidth = 634
-  Color = clBtnFace
+  Color = clMenuBar
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -23,51 +23,61 @@ object frmPrincipal: TfrmPrincipal
     Width = 23
     Height = 13
     Caption = 'Data'
+    Color = clWindowFrame
     FocusControl = edtData
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
   end
   object lblManhaEntrada: TLabel
-    Left = 114
-    Top = 5
+    Left = 26
+    Top = 51
     Width = 38
     Height = 13
     Caption = 'Entrada'
     FocusControl = edtManhaEntrada
   end
   object lblManhaSaida: TLabel
-    Left = 184
-    Top = 5
+    Left = 96
+    Top = 51
     Width = 26
     Height = 13
     Caption = 'Saida'
     FocusControl = edtManhaSaida
   end
   object lblTardeEntrada: TLabel
-    Left = 256
-    Top = 5
+    Left = 168
+    Top = 51
     Width = 38
     Height = 13
     Caption = 'Entrada'
     FocusControl = edtTardeEntrada
   end
   object lblTardeSaida: TLabel
-    Left = 324
-    Top = 5
+    Left = 236
+    Top = 51
     Width = 26
     Height = 13
     Caption = 'Saida'
     FocusControl = edtTardeSaida
   end
   object lblObservacao: TLabel
-    Left = 384
-    Top = 5
+    Left = 26
+    Top = 97
     Width = 58
     Height = 13
     Caption = 'Observa'#231#227'o'
+    Color = clCream
+    ParentColor = False
   end
   object lblHoje: TLabel
-    Left = 432
-    Top = 422
-    Width = 177
+    Left = 464
+    Top = 8
+    Width = 145
     Height = 13
     Caption = 'lblHoje'
   end
@@ -82,8 +92,8 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 0
   end
   object edtManhaEntrada: TDBEdit
-    Left = 114
-    Top = 24
+    Left = 26
+    Top = 70
     Width = 54
     Height = 21
     DataField = 'MANHA_ENTRADA'
@@ -92,8 +102,8 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 1
   end
   object edtManhaSaida: TDBEdit
-    Left = 184
-    Top = 24
+    Left = 96
+    Top = 70
     Width = 54
     Height = 21
     DataField = 'MANHA_SAIDA'
@@ -102,8 +112,8 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 2
   end
   object edtTardeEntrada: TDBEdit
-    Left = 256
-    Top = 24
+    Left = 168
+    Top = 70
     Width = 54
     Height = 21
     DataField = 'TARDE_ENTRADA'
@@ -112,8 +122,8 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 3
   end
   object edtTardeSaida: TDBEdit
-    Left = 324
-    Top = 24
+    Left = 236
+    Top = 70
     Width = 54
     Height = 21
     DataField = 'TARDE_SAIDA'
@@ -123,7 +133,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object DBGrid1: TDBGrid
     Left = 26
-    Top = 112
+    Top = 232
     Width = 583
     Height = 304
     DataSource = dtSource
@@ -181,16 +191,22 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnNovo: TButton
     Left = 26
-    Top = 71
+    Top = 189
     Width = 54
     Height = 27
     Caption = 'Novo'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWhite
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
     OnClick = btnNovoClick
   end
   object btnGravar: TButton
     Left = 96
-    Top = 71
+    Top = 189
     Width = 54
     Height = 27
     Caption = 'Salvar'
@@ -199,7 +215,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnCancelar: TButton
     Left = 168
-    Top = 71
+    Top = 189
     Width = 54
     Height = 27
     Caption = 'Cancelar'
@@ -208,7 +224,7 @@ object frmPrincipal: TfrmPrincipal
   end
   object btnExcluir: TButton
     Left = 236
-    Top = 71
+    Top = 189
     Width = 54
     Height = 27
     Caption = 'Excluir'
@@ -216,9 +232,9 @@ object frmPrincipal: TfrmPrincipal
     OnClick = btnExcluirClick
   end
   object DBMemo1: TDBMemo
-    Left = 384
-    Top = 24
-    Width = 225
+    Left = 26
+    Top = 116
+    Width = 264
     Height = 59
     DataField = 'OBSERVACAO'
     DataSource = dtSource
@@ -273,9 +289,7 @@ object frmPrincipal: TfrmPrincipal
       '  DATA = :OLD_DATA')
     ParamCheck = True
     UniDirectional = False
-    Active = True
-    Left = 320
-    Top = 56
+    Left = 136
     object dtSetDATA: TDateField
       FieldName = 'DATA'
       Origin = '"HORARIOS"."DATA"'
@@ -316,7 +330,6 @@ object frmPrincipal: TfrmPrincipal
   end
   object dtSource: TDataSource
     DataSet = dtSet
-    Left = 352
-    Top = 56
+    Left = 168
   end
 end
